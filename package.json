@@ -1,0 +1,20 @@
+{
+  "name": "personal-login-shortcut",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "description": "Open an incognito chrome window with open tabs containing your desired websites already logged in to your accounts with a single command.",
+  "main": "index.js",
+  "author": "Hersy",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "dependencies": {
+    "chrome-launcher": "^1.1.1",
+    "dotenv": "^16.4.5",
+    "puppeteer": "^22.6.1",
+    "request": "^2.88.2",
+    "util": "^0.12.5"
+  }
+}
