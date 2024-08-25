@@ -1,21 +1,54 @@
 {
-  "name": "personal-login-shortcut",
-  "version": "1.0.0",
+  "name": "@hersy/personal-login-shortcut",
+  "version": "1.1.0",
+  "description": "Open an incognito chrome window with open tabs containing your desired websites already logged in to your accounts with a single command.",
+  "keywords": [
+    "hersy",
+    "zap2shine",
+    "puppeteer",
+    "chrome",
+    "automation",
+    "login"
+  ],
+  "homepage": "https://github.com/hersy/personal-login-shortcut",
+  "bugs": {
+    "url": "https://github.com/hersy/personal-login-shortcut/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hersy/personal-login-shortcut.git"
+  },
+  "license": "MIT",
+  "contributors": [
+    "Hersy <hersy@hersy.org>",
+    "Zap2Shine <alexanderhugoupc@gmail.com>"
+  ],
+  "files": [
+    "bin",
+    "constants",
+    "helpers",
+    "puppeteer",
+    "index.js",
+    "config.js"
+  ],
+  "main": "index.js",
+  "bin": {
+    "logmein": "./bin/logmein"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "start": "node ./index.js"
   },
-  "description": "Open an incognito chrome window with open tabs containing your desired websites already logged in to your accounts with a single command.",
-  "main": "index.js",
-  "author": "Hersy",
-  "license": "MIT",
-  "private": false,
-  "type": "module",
   "dependencies": {
     "chrome-launcher": "^1.1.1",
     "dotenv": "^16.4.5",
     "puppeteer": "^22.6.1",
+    "react": "^18.3.1",
     "request": "^2.88.2",
     "require": "^2.4.20",
     "util": "^0.12.5"
-  }
+  },
+  "packageManager": "yarn@1.22.22"
 }

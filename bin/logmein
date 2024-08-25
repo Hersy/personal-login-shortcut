@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+const { execSync } = require('child_process');
+
+const cwd = process.cwd();
+
+const runCommand = command => {
+  try {
+    execSync(command, { stdio: 'inherit', cwd });
+  } catch (error) {
+    console.error(error);
+    process.exit(1);
+  }
+};
+
+runCommand(`yarn start`);
