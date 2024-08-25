@@ -26,6 +26,6 @@ const { websites } = config;
             await loginToWebsite(page, website, navigationPromise, 'input[name="email"]', 'input[name="password"]', 'button[type="submit"]');
         else if (website.url.includes('dwservice.net'))
             // Login to dw-service
-            await loginToWebsite(page, website, navigationPromise, '#loginuser', '#loginpassword', '#btnlogin');
+            await loginToWebsite(page, website, navigationPromise, 'input[autocomplete="email"]', 'input[type="password"]', '#id54_button', '#id52_panel');
     }
 })();
