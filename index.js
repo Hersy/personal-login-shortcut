@@ -2,9 +2,7 @@ import config from './config.js';
 import { launchChromeBrowser } from './helpers/browserHelper.js';
 import { loginToWebsite } from './helpers/pageHelper.js';
 
-const { websites } = config;
-
-(async () => {
+const runWebsiteLogins = async (websites) => {
     // Launch chrome incognito window
     const { browser, context } = await launchChromeBrowser();
 
@@ -28,4 +26,16 @@ const { websites } = config;
             // Login to dw-service
             await loginToWebsite(page, website, navigationPromise, 'input[autocomplete="email"]', 'input[type="password"]', '#id54_button', '#id52_panel');
     }
-})();
+}
+
+export const runDefaultLogins = async () => {
+    const { websites } = config;
+    await runWebsiteLogins(websites);
+};
+
+
+export const runLogins = async (websites) => {
+    await runWebsiteLogins(websites);
+};
+
+export default runLogins;

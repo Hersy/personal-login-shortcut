@@ -1,6 +1,6 @@
 {
   "name": "@hersy/personal-login-shortcut",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Open an incognito chrome window with open tabs containing your desired websites already logged in to your accounts with a single command.",
   "keywords": [
     "hersy",
